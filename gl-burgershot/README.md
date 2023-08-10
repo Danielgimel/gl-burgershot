@@ -42,6 +42,7 @@ end)
 end```
 
 5. in qb-smallrecources > config.lua lines 157-161 insert the following:
+
 ```
   Config.ConsumablesSoda = {
     ["scola"] = math.random(10, 15),
