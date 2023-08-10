@@ -100,7 +100,7 @@ end
 ```
 
 - In qb-management > client > cl_config.lua lines 48-50 insert the following:
-- 
+
 ```
     ['burgershot'] = {
         { coords = vector3(-1206.268, -891.8121, 13.995129), length = 1.15, width = 2.6, heading = 353.0, minZ = 12.59, maxZ = 14.99 },
