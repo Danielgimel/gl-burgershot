@@ -1,5 +1,5 @@
 # gl-burgershot
-A Burgershot job make for QBCore framework, Made by - Glichy
+A Burgershot job made for QBCore framework, Made by - Glichy
 
 ## Dependencies :
 
