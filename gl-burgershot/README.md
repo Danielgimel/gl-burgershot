@@ -39,7 +39,8 @@ end)
         if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
         TriggerClientEvent("consumables:client:SodaDrink", source, item.name)
     end)
-end```
+end
+```
 
 5. in qb-smallrecources > config.lua lines 157-161 insert the following:
 
