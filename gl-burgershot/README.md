@@ -26,7 +26,8 @@ Installation :
         TriggerServerEvent("consumables:server:addThirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + Config.ConsumablesSoda[itemName])
     end)
 end)```
-4. in qb-smallresources > server > consumables.lua > line 28 - 35 insert the following:
+
+4.## in qb-smallresources > server > consumables.lua > line 28 - 35 insert the following:
    
  for k,_ in pairs(Config.ConsumablesSoda) do
     QBCore.Functions.CreateUseableItem(k, function(source, item)
