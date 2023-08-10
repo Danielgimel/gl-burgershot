@@ -13,6 +13,7 @@ Installation :
 1. Dowload the script and put in inside you server files
 2. ensure gl-burgershot in your sever.cfg
 3. in qb-smallresources > client > consumables.lua line 180-192 insert the follwing:
+   
 RegisterNetEvent('consumables:client:SodaDrink', function(itemName)
     TriggerEvent('animations:client:EmoteCommandStart', {"soda4"})
     QBCore.Functions.progressbar("drink_something", Lang:t('consumables.drink_progress'), 5000, false, true, {
@@ -27,7 +28,8 @@ RegisterNetEvent('consumables:client:SodaDrink', function(itemName)
     end)
 end)
 
-4. in qb-smallresources > server > consumables.lua > line 28 - 35 insert the following:
+5. in qb-smallresources > server > consumables.lua > line 28 - 35 insert the following:
+   
  for k,_ in pairs(Config.ConsumablesSoda) do
     QBCore.Functions.CreateUseableItem(k, function(source, item)
         local Player = QBCore.Functions.GetPlayer(source)
@@ -35,13 +37,15 @@ end)
         TriggerClientEvent("consumables:client:SodaDrink", source, item.name)
     end)
 end
-5. in qb-smallrecources > config.lua lines 157-161 insert the following:
+7. in qb-smallrecources > config.lua lines 157-161 insert the following:
+
   Config.ConsumablesSoda = {
     ["scola"] = math.random(10, 15),
     ["mcola"] = math.random(20, 25),
     ["lcola"] = math.random(40, 45),
 }
-6. in qb-core > shared > items insert the following:
+8. in qb-core > shared > items insert the following:
+
 --- Drinks
 	["smallcup"] 			         = {["name"] = "smallcup", 			        	["label"] = "Small Cup", 		["created"] = nil, 		["decay"] = 2.0,		["weight"] = 125, 		["type"] = "item", 		["image"] = "smallcup.png", 		    ["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Smapp cup to refeel"},
 	["midcup"] 			             = {["name"] = "midcup", 			        	["label"] = "Midium Cup", 		["created"] = nil, 		["decay"] = 2.0,		["weight"] = 125, 		["type"] = "item", 		["image"] = "midcup.png", 		        ["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Midium cup to refeel"},
@@ -60,7 +64,7 @@ end
 	["burger-tomato"] 				 = {["name"] = "burger-tomato", 			 	["label"] = "Tomato", 			      ["created"] = nil, 		["decay"] = 2.0,   	["weight"] = 125, 		["type"] = "item", 		         	["image"] = "bs_tomato.png", 	    		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "An Ingredient"},
 	["hamburger"] 					= {["name"] = "hamburger",  	    		["label"] = "Hamburger",			       ["created"] = nil, 		["decay"] = 2.0, 	["weight"] = 100, 		["type"] = "item", 		["image"] = "hamburger.png", 		["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = "", ['hunger'] = math.random(20, 30) },
 	["burger-fries"] 				 = {["name"] = "burger-fries", 			 	  	["label"] = "Fries", 			["created"] = nil, 		["decay"] = 2.0,	["weight"] = 125, 		["type"] = "item", 			["image"] = "bs_fries.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "", ['hunger'] = math.random(20, 30) },
-7. In qb-core > shared > jobs.lua Insert the following:
+9. In qb-core > shared > jobs.lua Insert the following:
        ["burgershot"] = {
         label = "Burgershot",
         defaultDuty = true,
