@@ -9,7 +9,7 @@ qb-target - https://github.com/qbcore-framework/qb-target
 
 qb-menu - https://github.com/qbcore-framework/qb-menu
 
-Installation :
+## Installation :
 1. Dowload the script and put in inside you server files
 2. ensure gl-burgershot in your sever.cfg
 3. in qb-smallresources > client > consumables.lua line 180-192 insert the follwing:
