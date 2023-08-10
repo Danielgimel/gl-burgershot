@@ -49,6 +49,7 @@ end```
     ["lcola"] = math.random(40, 45),
 }
 ```
+
 6. in qb-core > shared > items insert the following:
 
 ```
@@ -71,7 +72,9 @@ end```
 	["hamburger"] 					= {["name"] = "hamburger",  	    		["label"] = "Hamburger",			       ["created"] = nil, 		["decay"] = 2.0, 	["weight"] = 100, 		["type"] = "item", 		["image"] = "hamburger.png", 		["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = "", ['hunger'] = math.random(20, 30) },
 	["burger-fries"] 				 = {["name"] = "burger-fries", 			 	  	["label"] = "Fries", 			["created"] = nil, 		["decay"] = 2.0,	["weight"] = 125, 		["type"] = "item", 			["image"] = "bs_fries.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "", ['hunger'] = math.random(20, 30) },
  ```
+
 7. In qb-core > shared > jobs.lua Insert the following:
+
 ```
        ["burgershot"] = {
         label = "Burgershot",
