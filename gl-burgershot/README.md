@@ -13,7 +13,7 @@ Installation :
 1. Dowload the script and put in inside you server files
 2. ensure gl-burgershot in your sever.cfg
 3. in qb-smallresources > client > consumables.lua line 180-192 insert the follwing:
-   
+   ```
 RegisterNetEvent('consumables:client:SodaDrink', function(itemName)
     TriggerEvent('animations:client:EmoteCommandStart', {"soda4"})
     QBCore.Functions.progressbar("drink_something", Lang:t('consumables.drink_progress'), 5000, false, true, {
@@ -27,7 +27,7 @@ RegisterNetEvent('consumables:client:SodaDrink', function(itemName)
         TriggerServerEvent("consumables:server:addThirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + Config.ConsumablesSoda[itemName])
     end)
 end)
-
+```
 4. in qb-smallresources > server > consumables.lua > line 28 - 35 insert the following:
    
  for k,_ in pairs(Config.ConsumablesSoda) do
