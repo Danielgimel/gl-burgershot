@@ -10,9 +10,9 @@ qb-target - https://github.com/qbcore-framework/qb-target
 qb-menu - https://github.com/qbcore-framework/qb-menu
 
 ## Installation :
-- 1. Dowload the script and put in inside you server files
-- 2. ensure gl-burgershot in your sever.cfg
-- 3. in qb-smallresources > client > consumables.lua line 180-192 insert the follwing:
+-  Dowload the script and put in inside you server files
+-  ensure gl-burgershot in your sever.cfg
+-  in qb-smallresources > client > consumables.lua line 180-192 insert the follwing:
    
 ```
 RegisterNetEvent('consumables:client:SodaDrink', function(itemName)
@@ -30,7 +30,7 @@ RegisterNetEvent('consumables:client:SodaDrink', function(itemName)
 end)
 ```
 
-- 4. in qb-smallresources > server > consumables.lua > line 28 - 35 insert the following:
+- in qb-smallresources > server > consumables.lua > line 28 - 35 insert the following:
    
 ```
  for k,_ in pairs(Config.ConsumablesSoda) do
@@ -42,7 +42,7 @@ end)
 end
 ```
 
-- 5. in qb-smallrecources > config.lua lines 157-161 insert the following:
+-  in qb-smallrecources > config.lua lines 157-161 insert the following:
 
 ```
   Config.ConsumablesSoda = {
@@ -52,7 +52,7 @@ end
 }
 ```
 
-- 6. in qb-core > shared > items insert the following:
+-  in qb-core > shared > items insert the following:
 
 ```
 --- Drinks
@@ -75,7 +75,7 @@ end
 	["burger-fries"] 				 = {["name"] = "burger-fries", 			 	  	["label"] = "Fries", 			["created"] = nil, 		["decay"] = 2.0,	["weight"] = 125, 		["type"] = "item", 			["image"] = "bs_fries.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "", ['hunger'] = math.random(20, 30) },
  ```
 
-- 7. In qb-core > shared > jobs.lua Insert the following:
+-  In qb-core > shared > jobs.lua Insert the following:
 
 ```
        ["burgershot"] = {
