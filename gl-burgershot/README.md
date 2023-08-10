@@ -1,7 +1,7 @@
 # gl-burgershot
 A Burgershot job make for QBCore framework, Made by - Glichy
 
-Dependencies :
+## Dependencies :
 
 QBCore Framework (qb-core) - https://github.com/qbcore-framework/qb-core
 
