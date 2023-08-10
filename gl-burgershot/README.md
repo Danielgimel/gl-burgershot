@@ -27,15 +27,15 @@ Installation :
     end)
 end)```
 
-4.## in qb-smallresources > server > consumables.lua > line 28 - 35 insert the following:
+4. in qb-smallresources > server > consumables.lua > line 28 - 35 insert the following:
    
- for k,_ in pairs(Config.ConsumablesSoda) do
+``` for k,_ in pairs(Config.ConsumablesSoda) do
     QBCore.Functions.CreateUseableItem(k, function(source, item)
         local Player = QBCore.Functions.GetPlayer(source)
         if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
         TriggerClientEvent("consumables:client:SodaDrink", source, item.name)
     end)
-end
+end```
 5. in qb-smallrecources > config.lua lines 157-161 insert the following:
 
   Config.ConsumablesSoda = {
